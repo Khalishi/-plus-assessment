@@ -183,7 +183,7 @@
         <div class="pl-8 ml-1">
         <label for="search" class="block text-sm font-medium text-white">User name</label>
             <div class="mt-1 relative flex items-center">
-                <input type="text" name="search" id="search" placeholder="Search for users" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block pr-12 sm:text-sm border-gray-300 bg-zinc-600 h-6 w-44 text-gray-400 pl-4">
+                <input type="text" name="search" id="search" value="Search for users" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block pr-12 sm:text-sm border-gray-300 bg-zinc-600 h-6 w-44 text-gray-400 pl-4">
                 <button type="button" class="pl-1">
                    <svg xmlns="http://www.w3.org/2000/svg" 
                         fill="none" 
@@ -278,6 +278,7 @@
 </div>
 
 <!-- pagination -->
+
 <!-- This example requires Tailwind CSS v2.0+ -->
 <div class="px-4 py-3 flex items-center justify-between sm:px-6">
   <div class="flex-1 flex justify-between sm:hidden">
@@ -288,7 +289,6 @@
       Next
     </a>
   </div>
-  <div class="hidden sm:flex-1 sm:flex sm:items-center sm:justify-between">
     <div>
       <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
         <a href="#" class="relative inline-flex items-center px-2 py-2 border border-gray-600 text-sm font-medium text-white">
@@ -299,7 +299,7 @@
           </svg>
         </a>
         <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-        <a href="#" aria-current="page" class="z-10 bg-red-500 border-red-700 text-black relative inline-flex items-center px-4 py-2 border text-sm font-medium">
+        <a href="#" aria-current="page" class="z-10 bg-red-500 border-red-600 text-black relative inline-flex items-center px-4 py-2 border text-sm font-medium">
           1
         </a>
         <a href="#" class="border-gray-600 text-white relative inline-flex items-center px-4 py-2 border text-sm font-medium">
@@ -310,7 +310,6 @@
   </div>
 </div>
 </main>
-    </div>
     </div>
     </body>
 </html>
