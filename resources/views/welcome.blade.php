@@ -1,5 +1,6 @@
-<x-layout>
-      <div class="h-screen flex overflow-hidden bg-gray-100">
+   <x-app-layout>
+   
+   <div class="h-screen flex overflow-hidden bg-gray-100">
     <!-- Off-canvas menu for mobile, show/hide based on off-canvas menu state. -->
     <div class="fixed inset-0 flex z-40 md:hidden" role="dialog" aria-modal="true">
         <!--
@@ -288,5 +289,5 @@
 </div>
 </main>
 </div>
+  </x-app-layout>
 
-</x-layout>
