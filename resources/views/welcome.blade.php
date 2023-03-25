@@ -1,39 +1,11 @@
    <x-app-layout>
-   
-  <x-sidebar />
-    
-     <main class="flex-1 relative overflow-y-auto focus:outline-none bg-zinc-800">
-       <nav aria-label="Top"> 
-        <div class="py-6">
-            <div class="max-w-7xl mx-auto h-10 px-4 flex items-center justify-between sm:px-6 lg:px-8">
-                <h1 class="text-2xl font-bold text-white">Users</h1>
-                <h1 class="text-small text-gray-900 bg-red-500 w-40 pl-4 h-10 pt-2">Create New User</h1>
-            </div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-               
-            </div>
-        </div>
-        </nav>
-        <div class="pl-8 ml-1">
-        <label for="search" class="block text-sm font-medium text-white">User name</label>
-            <div class="mt-1 relative flex items-center">
-                <input type="text" name="search" id="search" placeholder="Search for users" class="shadow-sm focus:ring-indigo-500 focus:border-indigo-500 block pr-12 sm:text-sm border-gray-300 bg-zinc-600 h-6 w-44 text-gray-400 pl-4">
-                <button type="button" class="pl-1">
-                   <svg xmlns="http://www.w3.org/2000/svg" 
-                        fill="none" 
-                        viewBox="0 0 24 24" 
-                        stroke-width="1.5" 
-                        stroke="currentColor" 
-                        class="bg-zinc-600 h-6 w-8">
-                        <path 
-                        stroke-linecap="round" 
-                        stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" 
-                        />
-                   </svg>
 
-                </button>
-            </div>
-        </div>
+   <x-sidebar />
+
+     <main class="flex-1 relative overflow-y-auto focus:outline-none bg-zinc-800">
+       @include('layouts.top-nav')
+
+     <x-search-form />
 
  <!-- new template -->
 <div class="flex flex-col p-8">
@@ -147,4 +119,3 @@
 </div>
 
 </x-app-layout>
-
