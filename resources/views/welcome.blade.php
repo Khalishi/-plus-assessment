@@ -7,42 +7,74 @@
 
      <x-search-form />
 
-     <x-admin-table />
+     <x-admin-table>
+         <table class="min-w-full">
+               <th scope="col">
+                  <x-table-titles>First Name</x-table-titles>
+              </th>
+               <th scope="col">
+                  <x-table-titles>Last Name</x-table-titles>
+                </th>
+                <th scope="col">
+                  <x-table-titles>Email Adress</x-table-titles>
+                </th>
+                <th scope="col">
+                  <x-table-titles>Role</x-table-titles>
+                </th>
+                <th scope="col">
+                  <x-table-titles>Member Since</x-table-titles>
+                </th>
 
+          <tbody class="bg-zinc-600 divide-y-8 divide-zinc-900">
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                    <div class="text-sm text-white">
+                      jane
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-white">Doe</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-white">
+                  jane.cooper@example.com
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-white">
+                Admin
+              </td>
+              <td class="px-6 py-4">
+                <a href="#" class="text-white">21 sep 2021</a>
+              </td>
+            </tr>
+            <!-- second raw -->
+            <tr>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="flex items-center">
+                    <div class="text-sm text-white">
+                       Thanyani
+                  </div>
+                </div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap">
+                <div class="text-sm text-white">Khalishi</div>
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-white">
+                  khalishisimon@gmail.com
+              </td>
+              <td class="px-6 py-4 whitespace-nowrap text-sm text-white">
+                User
+              </td>
+              <td class="px-6 py-4">
+                <a href="#" class="text-white">21 sep 2021</a>
+              </td>
+            </tr>
+          </tbody>
+      </table>
+  </x-admin-table>
 
 <!-- pagination -->
-
-<!-- This example requires Tailwind CSS v2.0+ -->
-<div class="px-4 py-3 flex items-center justify-between sm:px-6">
-  <div class="flex-1 flex justify-between sm:hidden">
-    <a href="#" class="relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-      Previous
-    </a>
-    <a href="#" class="ml-3 relative inline-flex items-center px-4 py-2 border border-gray-300 text-sm font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
-      Next
-    </a>
-  </div>
-    <div>
-      <nav class="relative z-0 inline-flex rounded-md shadow-sm -space-x-px" aria-label="Pagination">
-        <a href="#" class="relative inline-flex items-center px-2 py-2 border border-gray-600 text-sm font-medium text-white">
-          <span class="sr-only">Previous</span>
-          <!-- Heroicon name: solid/chevron-left -->
-          <svg class="h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-            <path fill-rule="evenodd" d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" clip-rule="evenodd" />
-          </svg>
-        </a>
-        <!-- Current: "z-10 bg-indigo-50 border-indigo-500 text-indigo-600", Default: "bg-white border-gray-300 text-gray-500 hover:bg-gray-50" -->
-        <a href="#" aria-current="page" class="z-10 bg-red-500 border-red-600 text-black relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-          1
-        </a>
-        <a href="#" class="border-gray-600 text-white relative inline-flex items-center px-4 py-2 border text-sm font-medium">
-          2
-        </a>
-      </nav>
-    </div>
-  </div>
-</div>
+<x-pagination />
 </main>
-</div>
 
 </x-app-layout>
