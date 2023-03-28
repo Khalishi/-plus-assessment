@@ -29,8 +29,8 @@
             <tr>
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
-                    <div class="text-sm text-white">
-                      jane
+                    <div class="text-sm text-amber-300 underline">
+                        <a href="/admin/edit">jane</a>
                   </div>
                 </div>
               </td>
@@ -51,8 +51,8 @@
             <tr>
               <td class="px-6 py-4 whitespace-nowrap">
                 <div class="flex items-center">
-                    <div class="text-sm text-white">
-                       Thanyani
+                    <div class="text-sm text-amber-300 underline">
+                      <a href="/admin/edit">Thanyani</a>
                   </div>
                 </div>
               </td>
@@ -73,7 +73,8 @@
       </table>
   </x-admin-table>
 
-<!-- pagination -->
+    <!-- pagination -->
+
 <x-pagination />
 </main>
 
