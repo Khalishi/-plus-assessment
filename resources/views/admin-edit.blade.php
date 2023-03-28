@@ -1,4 +1,5 @@
 <x-app-layout>
+
     <x-sidebar />
 
     <main class="flex-1 relative overflow-y-auto focus:outline-none bg-zinc-800">
@@ -38,7 +39,7 @@
                   <input type="text"
                   name="name" id="name"
                   class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 sm:text-xs w-80" >
-                </div>
+            </div>
 
                 <div>
                 <label for="role"
@@ -59,7 +60,7 @@
                    First name
                  </label>
 
-                <label for="name"
+               <label for="name"
                 class="block text-xs font-medium text-white ml-28 pl-2">
                   Last name
                 </label>
