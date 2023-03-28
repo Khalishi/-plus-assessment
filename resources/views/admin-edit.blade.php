@@ -31,6 +31,14 @@
                  name="name" id="name"
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-500 w-40 sm:text-xs" >
             </div>
+
+               <label for="name"
+                class="block text-xs font-medium text-white ml-28 pl-2">
+                  Email
+                </label>
+                <input type="text"
+                 name="name" id="name"
+                 class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-500 w-40 sm:text-xs" >
         </div>
     </div>
     </main>
