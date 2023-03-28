@@ -4,7 +4,9 @@
 
     <main class="flex-1 relative overflow-y-auto focus:outline-none bg-zinc-800">
         <div class="text-white pl-6 pt-4">
-            <p class="text-sm">Back to Users</p>
+             <p>
+                <a href="/" class="text-sm hover:underline hover:text-amber-300">Back to Users</a>
+             </p>
             <h1 class="text-xl font-bold">khalishi Thanyani</h1>
         </div>
   <div class="bg-zinc-700 w-11/12 ml-6">
