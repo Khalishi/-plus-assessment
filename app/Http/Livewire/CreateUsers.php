@@ -32,12 +32,13 @@ class CreateUsers extends ModalComponent
                 'email' => 'required|email|max:255|unique:users',
                 'password' => 'required|min:8|max:255',
                 'ConfirmPassword' => 'required|same:password',
-                'role' => 'required',
+                'role' => 'nullable',
             ]
         )->validate();
 
         // Save the user to the database
-        $user->save();
+        // $user->save();
+        dd($validatedData);
     }
 
     public function updated($propertyName)
