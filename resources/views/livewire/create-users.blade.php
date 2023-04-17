@@ -1,4 +1,4 @@
-<x-modal form-action="createUsers">
+<x-modal form-action="CreateUsers">
      <x-slot name="title">
           Create Users
     </x-slot>
