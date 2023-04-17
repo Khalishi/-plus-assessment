@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Models\User;
 use LivewireUI\Modal\ModalComponent;
 
 class CreateUsers extends ModalComponent
@@ -20,11 +21,14 @@ class CreateUsers extends ModalComponent
         'password' => 'required|min:8|max:255',
         'ConfirmPassword' => 'required|same:password',
         'role' => 'nullable',
+
     ];
 
     public function createUsers()
     {
         $validatedData = $this->validate();
+
+        // dd($validatedData);
 
         User::create($validatedData);
         $this->dispatchBrowserEvent('recordCreated');
