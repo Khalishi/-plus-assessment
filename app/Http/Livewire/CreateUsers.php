@@ -2,7 +2,6 @@
 
 namespace App\Http\Livewire;
 
-use Illuminate\Support\Facades\Validator;
 use LivewireUI\Modal\ModalComponent;
 
 class CreateUsers extends ModalComponent
@@ -14,31 +13,24 @@ class CreateUsers extends ModalComponent
     public $password;
     public $ConfirmPassword;
     public $role;
+    protected $rules = [
+        'firstName' => 'required|min:3|max:50',
+        'LastName' => 'required|min:3|max:50',
+        'email' => 'required|email|max:255|unique:users',
+        'password' => 'required|min:8|max:255',
+        'ConfirmPassword' => 'required|same:password',
+        'role' => 'nullable',
+    ];
 
     public function createUsers()
     {
-        $validatedData = Validator::make(
-            [
-                'firstName' => $this->firstName,
-                'LastName' => $this->LastName,
-                'email' => $this->email,
-                'password' => $this->password,
-                'confirmPassword' => $this->ConfirmPassword,
-            ],
+        $validatedData = $this->validate();
 
-            [
-                'firstName' => 'required|min:3|max:50',
-                'LastName' => 'required|min:3|max:50',
-                'email' => 'required|email|max:255|unique:users',
-                'password' => 'required|min:8|max:255',
-                'ConfirmPassword' => 'required|same:password',
-                'role' => 'nullable',
-            ]
-        )->validate();
+        User::create($validatedData);
+        $this->dispatchBrowserEvent('recordCreated');
+        $this->reset();
+        $this->emit('recordAdded');
 
-        // Save the user to the database
-        // $user->save();
-        dd($validatedData);
     }
 
     public function updated($propertyName)
@@ -51,6 +43,7 @@ class CreateUsers extends ModalComponent
             'ConfirmPassword' => 'required|same:password',
             'role' => 'required',
         ]);
+
     }
 
     public function render()
