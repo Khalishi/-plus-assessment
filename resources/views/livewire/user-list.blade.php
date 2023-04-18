@@ -9,7 +9,7 @@
       </div>
   </td>
 <td class="px-6 py-4 whitespace-nowrap">
-     <div class="text-sm text-white">{{ $user->lastName }}</div>
+     <div class="text-sm text-white">{{ $user->LastName }}</div>
 </td>
 <td class="px-6 py-4 whitespace-nowrap text-white">
       {{ $user->email }}
