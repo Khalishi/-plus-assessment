@@ -7,7 +7,6 @@ use LivewireUI\Modal\ModalComponent;
 
 class CreateUsers extends ModalComponent
 {
-
     public $firstName;
     public $LastName;
     public $email;
@@ -20,7 +19,7 @@ class CreateUsers extends ModalComponent
         'email' => 'required|email|max:255|unique:users',
         'password' => 'required|min:8|max:255',
         'ConfirmPassword' => 'required|same:password',
-        'role' => 'nullable',
+        'role' => 'required',
 
     ];
 
@@ -28,12 +27,8 @@ class CreateUsers extends ModalComponent
     {
         $validatedData = $this->validate();
 
-        // dd($validatedData);
-
         User::create($validatedData);
-        $this->dispatchBrowserEvent('recordCreated');
         $this->reset();
-        $this->emit('recordAdded');
 
     }
 
@@ -52,6 +47,7 @@ class CreateUsers extends ModalComponent
 
     public function render()
     {
+
         return view('livewire.create-users');
 
     }
