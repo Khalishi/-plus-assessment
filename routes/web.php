@@ -14,6 +14,8 @@ Route::get('/admin/edit', function () {
     return view('admin-edit');
 });
 
+// Route::get('/users/{user}/edit', EditUser::class)->name('users.edit');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth'])->name('dashboard');
