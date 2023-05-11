@@ -2,6 +2,6 @@
 
     <x-sidebar />
 
-      <livewire:edit-user />
+      <livewire:edit-user :user="$user" />
 
   </x-app-layout>
