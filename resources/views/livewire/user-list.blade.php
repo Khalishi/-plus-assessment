@@ -4,7 +4,7 @@
     <td class="px-6 py-4 whitespace-nowrap">
        <div class="flex items-center">
           <div class="text-sm text-amber-300 underline">
-                 <a href="/admin/edit">{{ $user->firstName }}</a>
+                 <a href="{{ route('admin-edit', $user) }}">{{ $user->firstName }}</a>
           </div>
       </div>
   </td>
