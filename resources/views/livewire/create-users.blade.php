@@ -91,7 +91,7 @@
                     @endif
                  </div>
                  <div>
-                    @if ($errors->has('password'))
+                    @if ($errors->has('ConfirmPassword'))
                        <span class="error text-red-500 text-xs">{{ $errors->first('ConfirmPassword') }}</span>
                     @endif
              </div>

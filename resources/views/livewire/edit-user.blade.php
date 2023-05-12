@@ -11,7 +11,7 @@
        <h1 class="text-lg pt-6">User Details</h1>
 
           @if(session()->has('success_message'))
-            <div class="alert alert-success tex-white bg-red-500 rounded-md">
+            <div class="alert alert-success tex-white bg-red-500">
                   {{ session('success_message') }}
             </div>
           @endif
@@ -90,13 +90,13 @@
                 </label>
             </div>
             <div class="py-2 flex space-x-4">
-                <input type="text"wire:model.defer="password" value="{{ old('Password', $this->password) }}"
+                <input type="password"wire:model.defer="password" value="{{ old('Password', $this->password) }}"
                  name="password" id="password"
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-40 sm:text-xs" >
 
 
-                <input type="text"
-                 name="password" id="password"wire:model.defer="password"
+                <input type="password"
+                 name="ConfirmPassword" id="ConfirmPassword"wire:model.defer="ConfirmPassword"
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-36 sm:text-xs" >
             </div>
               <div>
@@ -106,7 +106,7 @@
                  </div>
                  <div>
                     @if ($errors->has('ConfirmPassword'))
-                       <span class="error text-red-500 text-xs">{{ $errors->first('password') }}</span>
+                       <span class="error text-red-500 text-xs">{{ $errors->first('ConfirmPassword') }}</span>
                     @endif
              </div>
 
