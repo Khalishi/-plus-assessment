@@ -10,6 +10,12 @@
     <div class="mt-6 pl-10 text-white">
        <h1 class="text-lg pt-6">User Details</h1>
 
+          @if(session()->has('success_message'))
+            <div class="alert alert-success tex-white bg-red-500 rounded-md">
+                  {{ session('success_message') }}
+            </div>
+          @endif
+
          <form wire:submit.prevent="updateUser">
             <div class="py-2 flex">
                 <label for="FirstName"
@@ -28,13 +34,13 @@
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-40 sm:text-xs" >
 
 
-                <input type="text" wire:model.defer="LastName" value="{{ old('LastName', $this->LastName) }}"
-                 name="LastName" id="LastName"
+                <input type="text" wire:model.defer="lastName" value="{{ old('lastName', $this->lastName) }}"
+                 name="lastName" id="lastName"
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-36 sm:text-xs" >
             </div>
                <div>
                     @if ($errors->has('LastName'))
-                       <span class="error text-red-500 text-xs">{{ $errors->first('LastName') }}</span>
+                       <span class="error text-red-500 text-xs">{{ $errors->first('lastName') }}</span>
                     @endif
                  </div>
                  <div>

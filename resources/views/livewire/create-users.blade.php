@@ -10,7 +10,7 @@
                    First name
                  </label>
 
-                <label for="LastName"
+                <label for="lastName"
                 class="block text-xs font-medium text-white ml-28 pl-2">
                   Last name
 
@@ -22,13 +22,13 @@
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-40 sm:text-xs" >
 
 
-                <input wire:model="LastName" type="text"
+                <input wire:model="lastName" type="text"
                  class="block border-0 border-b-2 border-bg-zinc-900 p-0 bg-zinc-700 w-36 sm:text-xs" >
 
             </div>
              <div>
                     @if ($errors->has('LastName'))
-                       <span class="error text-red-500 text-xs">{{ $errors->first('LastName') }}</span>
+                       <span class="error text-red-500 text-xs">{{ $errors->first('lastName') }}</span>
                     @endif
                  </div>
                  <div>
@@ -86,13 +86,13 @@
             </div>
 
              <div>
-                    @if ($errors->has('LastName'))
-                       <span class="error text-red-500 text-xs">{{ $errors->first('LastName') }}</span>
+                    @if ($errors->has('password'))
+                       <span class="error text-red-500 text-xs">{{ $errors->first('password') }}</span>
                     @endif
                  </div>
                  <div>
-                    @if ($errors->has('firstName'))
-                       <span class="error text-red-500 text-xs">{{ $errors->first('firstName') }}</span>
+                    @if ($errors->has('password'))
+                       <span class="error text-red-500 text-xs">{{ $errors->first('ConfirmPassword') }}</span>
                     @endif
              </div>
     </x-slot>

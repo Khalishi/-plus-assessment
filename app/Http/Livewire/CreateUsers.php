@@ -8,14 +8,14 @@ use LivewireUI\Modal\ModalComponent;
 class CreateUsers extends ModalComponent
 {
     public $firstName;
-    public $LastName;
+    public $lastName;
     public $email;
     public $password;
     public $ConfirmPassword;
     public $role;
     protected $rules = [
         'firstName' => 'required|min:3|max:50',
-        'LastName' => 'required|min:3|max:50',
+        'lastName' => 'required|min:3|max:50',
         'email' => 'required|email|max:255|unique:users',
         'password' => 'required|min:8|max:255',
         'ConfirmPassword' => 'required|same:password',
@@ -36,7 +36,7 @@ class CreateUsers extends ModalComponent
     {
         $this->validateOnly($propertyName, [
             'firstName' => 'required|min:3|max:50',
-            'LastName' => 'required|min:3|max:50',
+            'lastName' => 'required|min:3|max:50',
             'email' => 'required|email|max:255|unique:users',
             'password' => 'required|min:8|max:255',
             'ConfirmPassword' => 'required|same:password',
