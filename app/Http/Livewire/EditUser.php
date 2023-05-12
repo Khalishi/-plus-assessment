@@ -19,7 +19,7 @@ class EditUser extends Component
         'lastName' => 'required|min:3|max:50',
         'email' => 'required|email|max:255',
         'password' => 'required|min:8|max:255',
-        // 'ConfirmPassword' => 'required|same:password',
+        'ConfirmPassword' => 'required|same:password',
         'role' => 'required',
 
     ];
@@ -33,6 +33,7 @@ class EditUser extends Component
         $this->email = $user->email;
         $this->role = $user->role;
         $this->password = $user->password;
+        $this->ConfirmPassword = $user->ConfirmPassword;
 
     }
 
@@ -45,8 +46,10 @@ class EditUser extends Component
             'firstName' => $this->firstName,
             'lastName' => $this->lastName,
             'email' => $this->email,
-            'password' => bcrypt($this->password),
             'role' => $this->role,
+            'password' => bcrypt($this->password),
+            'ConfirmPassword' => bcrypt($this->ConfirmPassword),
+
         ]);
 
         session()->flash('success_message', 'User updated successfully!');
