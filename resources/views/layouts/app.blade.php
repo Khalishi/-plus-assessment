@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://cdn.tailwindcss.com"></script>
         <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
 
         <title>Plus-assessment</title>
@@ -32,10 +33,11 @@
     <body class="antialiased">
 
         {{ $slot }}
-        
+
         @livewire('livewire-ui-modal')
 
         @livewireScripts
+         <script src="{{ mix('js/app.js') }}"></script>
     </body>
 
 </html>
