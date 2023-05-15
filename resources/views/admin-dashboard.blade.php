@@ -25,13 +25,8 @@
                   <x-table-titles>Member Since</x-table-titles>
            </th>
 
-              @livewire('user-list')
+         @livewire('user-list')
       </table>
   </x-admin-table>
-
-    <!-- pagination -->
-
-<x-pagination />
 </main>
-
 </x-app-layout>
